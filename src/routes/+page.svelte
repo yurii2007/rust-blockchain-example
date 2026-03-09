@@ -24,5 +24,5 @@
 <h1>Welcome to SvelteKit</h1>
 <p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
 
-<button {onclick}>login with google </button>
+<button {onclick} class="rounded-sm bg-primary-500 p-2">login with google </button>
 <button onclick={check_auth} class="mt-2">auth request</button>

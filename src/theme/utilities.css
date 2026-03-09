@@ -1,0 +1,7 @@
+@utility grid-cols-fr-* {
+  grid-template-columns: repeat(value(--integer), 1fr);
+}
+
+@utility flex-fixed-* {
+  flex: 0 0 --spacing(--value(number));
+}
