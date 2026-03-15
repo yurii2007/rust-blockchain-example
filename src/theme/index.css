@@ -3,14 +3,19 @@
 @plugin '@tailwindcss/forms';
 
 @import './base.css';
+@import './typography.css';
 @import './utilities.css';
 @import './variants.css';
 
+@source '../app.html';
+
 :root {
+  --font-family-root: 'Figtree', sans-serif;
+
   --radius: 0.75rem;
 
-  --background: oklch(0.08 0 0);
-  --foreground: oklch(0.96 0 0);
+  --background: oklch(17.8% 0.027 126.6);
+  --foreground: oklch(96.5% 0.012 247.8);
 
   --card: oklch(0.11 0 0);
   --card-foreground: oklch(0.96 0 0);

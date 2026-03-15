@@ -15,7 +15,7 @@
   }
 
   async function check_auth() {
-    await fetch('http://localhost:8080/api', {
+    await fetch('http://localhost:8080/api/status', {
       method: 'GET',
       headers: {},
       credentials: 'include'
