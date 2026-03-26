@@ -22,9 +22,18 @@
     font: 500 0.875rem/1.5 var(--font-family-root);
     color: var(--muted-foreground);
   }
+  .typography-subtitle2 {
+    font: 500 0.75rem/1.5 var(--font-family-root);
+    letter-spacing: 0.1px;
+    color: var(--muted-foreground);
+  }
   .typography-body1 {
     font: 500 0.875rem/1.5 var(--font-family-root);
     letter-spacing: -0.2px;
+  }
+  .typography-body2 {
+    font: 400 0.75rem/1.6 var(--font-family-root);
+    letter-spacing: -0.1px;
   }
   .typography-button {
     font: 700 0.8125rem/1 var(--font-family-root);
