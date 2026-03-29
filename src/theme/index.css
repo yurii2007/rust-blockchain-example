@@ -10,11 +10,11 @@
 @source '../app.html';
 
 :root {
-  --font-family-root: 'Figtree', sans-serif;
+  --font-family-root: 'Space Grotesk', sans-serif;
 
   --radius: 0.75rem;
 
-  --background: oklch(21.78% 0 0);
+  --background: oklch(18.22% 0 0);
   --foreground: oklch(92.88% 0.013 255.51);
 
   --card: oklch(0.11 0 0);

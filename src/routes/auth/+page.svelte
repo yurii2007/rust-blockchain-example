@@ -15,7 +15,7 @@
       Next-gen expense management
     </p>
     <form class="mt-12 max-w-100">
-      <p class="typography-h4 text-center">Welcome back</p>
+      <p class="typography-h3 text-center">Welcome back</p>
       <p class="typography-subtitle mt-1 text-center text-foreground">
         Select a provider to continue
       </p>
@@ -30,12 +30,12 @@
       </ul>
 
       <p
-        class="typography-subtitle2 mt-8 w-full border-t pt-8 text-center whitespace-nowrap uppercase"
+        class="typography-subtitle mt-8 w-full border-t pt-8 text-center whitespace-nowrap uppercase"
       >
         Secure Access Provided by NeoSpend
       </p>
 
-      <p class="typography-subtitle2 mt-8 text-center text-foreground">
+      <p class="typography-subtitle mt-8 text-center text-foreground">
         By signing in, you agree to our <a href={anchor} class="text-muted-foreground">Terms</a> and
         <a href={anchor} class="text-muted-foreground">Privacy Policy</a>.
       </p>
@@ -44,8 +44,8 @@
 
   <footer class="w-full border-t">
     <ul class="mx-auto mt-8 flex justify-center gap-8">
-      <li class="typography-subtitle2">Support</li>
-      <li class="typography-subtitle2">System Status</li>
+      <li class="typography-subtitle">Support</li>
+      <li class="typography-subtitle">System Status</li>
     </ul>
   </footer>
 </main>

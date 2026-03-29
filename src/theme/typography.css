@@ -1,42 +1,38 @@
 @layer components {
   .typography-h1 {
-    font: 500 2.5rem/1.15 var(--font-family-root);
-    letter-spacing: -1px;
+    font: 600 3.75rem/1 var(--font-family-root);
+    letter-spacing: -3px;
   }
   .typography-h2 {
-    font: 500 2rem/1.2 var(--font-family-root);
-    letter-spacing: -0.5px;
+    font: 600 3rem/1 var(--font-family-root);
+    letter-spacing: -1.2px;
     @media screen and (max-width: 767.99px) {
       letter-spacing: normal;
     }
   }
   .typography-h3 {
-    font: 500 1.75rem/1.25 var(--font-family-root);
-    letter-spacing: normal;
+    font: 500 1.875rem/1.2 var(--font-family-root);
+    letter-spacing: 0;
   }
   .typography-h4 {
     font: 500 1.25rem/1.3 var(--font-family-root);
     letter-spacing: normal;
   }
   .typography-subtitle {
-    font: 500 0.875rem/1.5 var(--font-family-root);
-    color: var(--muted-foreground);
-  }
-  .typography-subtitle2 {
-    font: 500 0.75rem/1.5 var(--font-family-root);
-    letter-spacing: 0.1px;
+    font: 400 0.75rem/1.3 var(--font-family-root);
+    letter-spacing: 1.2px;
     color: var(--muted-foreground);
   }
   .typography-body1 {
-    font: 500 0.875rem/1.5 var(--font-family-root);
-    letter-spacing: -0.2px;
+    font: 500 1.125rem/1.55 var(--font-family-root);
+    letter-spacing: 0px;
   }
   .typography-body2 {
-    font: 400 0.75rem/1.6 var(--font-family-root);
-    letter-spacing: -0.1px;
+    font: 400 1rem/1.5 var(--font-family-root);
+    letter-spacing: 0px;
   }
   .typography-button {
-    font: 700 0.8125rem/1 var(--font-family-root);
+    font: 600 1rem/1.5 var(--font-family-root);
     letter-spacing: 0px;
   }
 }
