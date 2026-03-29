@@ -1,5 +1,8 @@
 <script lang="ts">
+  import { resolve } from '$app/paths';
   import { Button } from '$lib/components/ui/button';
+
+  const anchor = resolve('/');
 </script>
 
 <main
@@ -33,8 +36,8 @@
       </p>
 
       <p class="typography-subtitle2 mt-8 text-center text-foreground">
-        By signing in, you agree to our <a href="/" class="text-muted-foreground">Terms</a> and
-        <a href="/" class="text-muted-foreground">Privacy Policy</a>.
+        By signing in, you agree to our <a href={anchor} class="text-muted-foreground">Terms</a> and
+        <a href={anchor} class="text-muted-foreground">Privacy Policy</a>.
       </p>
     </form>
   </section>
