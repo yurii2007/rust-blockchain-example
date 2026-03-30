@@ -1,5 +1,6 @@
 <script lang="ts">
   import { resolve } from '$app/paths';
+  import { AuthIcon } from '$lib/components/(auth)/icon';
   import { Button } from '$lib/components/ui/button';
 
   const anchor = resolve('/');
@@ -22,10 +23,16 @@
 
       <ul class="mt-8 flex w-full flex-col gap-3">
         <li class="w-full">
-          <Button variant="outline" class="w-full">google</Button>
+          <Button variant="outline" class="w-full">
+            <AuthIcon icon="google-color" />
+            google</Button
+          >
         </li>
         <li class="w-full">
-          <Button variant="outline" class="w-full">github</Button>
+          <Button variant="outline" class="w-full text-muted-foreground">
+            <AuthIcon icon="github-outlined" />
+            github</Button
+          >
         </li>
       </ul>
 
