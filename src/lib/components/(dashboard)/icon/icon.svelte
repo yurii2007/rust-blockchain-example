@@ -1,8 +1,8 @@
 <script lang="ts" module>
-  export type AuthIconName = 'google-color' | 'github-outlined';
+  export type DashboardIconName = 'layout-box' | 'wallet';
 
   export interface Props {
-    icon: AuthIconName;
+    icon: DashboardIconName;
   }
 </script>
 
@@ -11,5 +11,5 @@
 </script>
 
 <svg>
-  <use xlink:href="#svg--auth-{icon}" />
+  <use xlink:href="#svg--dashboard-{icon}" />
 </svg>

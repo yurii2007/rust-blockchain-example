@@ -25,13 +25,13 @@
         <li class="w-full">
           <Button variant="outline" class="w-full">
             <AuthIcon icon="google-color" />
-            google</Button
+            Continue with Google</Button
           >
         </li>
         <li class="w-full">
-          <Button variant="outline" class="w-full text-muted-foreground">
+          <Button variant="outline" class="w-full">
             <AuthIcon icon="github-outlined" />
-            github</Button
+            Continue with GitHub</Button
           >
         </li>
       </ul>

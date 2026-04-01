@@ -1,5 +1,5 @@
 import { sequence } from '@sveltejs/kit/hooks';
-import svgSprite from '$lib/sveltekit-sprite.svg?raw';
+import svgSprite from '$lib/assets/sprite.svg?raw';
 import type { Handle } from '@sveltejs/kit';
 
 const handleSvgSprite: Handle = async ({ event, resolve }) => {
