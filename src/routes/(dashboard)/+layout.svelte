@@ -9,8 +9,8 @@
   <title>Neo Ledger</title>
 </svelte:head>
 
-<div>
+<div class="grid grid-cols-[256px_1fr] grid-rows-[auto_1fr]">
+  <Navbar class="row-span-2" />
   <Header />
-  <Navbar />
   {@render children()}
 </div>

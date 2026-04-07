@@ -3,5 +3,5 @@
 </script>
 
 <DashboardPage>
-  <h1>Dashboard</h1>
+  <h1>Balance</h1>
 </DashboardPage>
