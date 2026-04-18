@@ -8,4 +8,10 @@ const handleSvgSprite: Handle = async ({ event, resolve }) => {
   });
 };
 
-export const handle: Handle = sequence(handleSvgSprite);
+const handleAuthState: Handle = async ({ event, resolve }) => {
+  console.log('handle auth state: ', event.url);
+
+  return resolve(event);
+};
+
+export const handle: Handle = sequence(handleSvgSprite, handleAuthState);
