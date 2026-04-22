@@ -1,9 +1,23 @@
 <script lang="ts">
   import { resolve } from '$app/paths';
+  import { PUBLIC_API_URL } from '$env/static/public';
   import { AuthIcon } from '$lib/components/(auth)/icon';
   import { Button } from '$lib/components/ui/button';
 
   const anchor = resolve('/');
+
+  async function onGoogleClick() {
+    const res = await fetch(`${PUBLIC_API_URL}/auth/google/login`, {
+      method: 'GET',
+      credentials: 'include'
+    });
+
+    const parsed = await res.json();
+
+    console.log('res', parsed);
+
+    window.location = parsed.redirect_url;
+  }
 </script>
 
 <main
@@ -23,7 +37,7 @@
 
       <ul class="mt-8 flex w-full flex-col gap-3">
         <li class="w-full">
-          <Button variant="outline" class="w-full">
+          <Button variant="outline" class="w-full" onclick={onGoogleClick}>
             <AuthIcon icon="google-color" />
             Continue with Google</Button
           >
