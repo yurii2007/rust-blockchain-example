@@ -45,4 +45,13 @@
   </nav>
 
   {@render children?.()}
+
+  <form method="POST" action="/logout" class="px-6 pb-4">
+    <button
+      type="submit"
+      class="w-full rounded-md px-4 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-primary"
+    >
+      Log out
+    </button>
+  </form>
 </aside>

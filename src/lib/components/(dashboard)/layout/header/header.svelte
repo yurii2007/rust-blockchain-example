@@ -9,6 +9,7 @@
 
 <script lang="ts">
   import { Input } from '$lib/components/ui/input';
+  import { page } from '$app/state';
 
   let { class: className }: HeaderProps = $props();
 </script>
@@ -22,4 +23,8 @@
   >
     <DashboardIcon icon="notification" class="size-4" width={16} height={16} />
   </button>
+
+  {#if page.data.user}
+    <span class="text-sm text-muted-foreground">{page.data.user.name}</span>
+  {/if}
 </header>
