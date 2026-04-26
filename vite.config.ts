@@ -15,5 +15,8 @@ export default defineConfig({
       outputFile: 'src/lib/assets/sprite.svg'
     })
   ],
-  server: { port: 3000 }
+  server: { port: 3000 },
+  ssr: {
+    noExternal: ['bits-ui']
+  }
 });

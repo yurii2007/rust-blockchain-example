@@ -12,7 +12,7 @@ const handleSvgSprite: Handle = async ({ event, resolve }) => {
 
 const handleAuthState: Handle = async ({ event, resolve }) => {
   try {
-    const res = await event.fetch(`${PUBLIC_API_URL}/auth`);
+    const res = await event.fetch(`${PUBLIC_API_URL}/auth/user`, { credentials: 'include' });
 
     if (res.ok) {
       const body = await res.json();

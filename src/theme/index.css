@@ -1,6 +1,5 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
-@plugin '@tailwindcss/forms';
 
 @import './base.css';
 @import './typography.css';
@@ -130,6 +129,8 @@
 }
 
 @theme inline {
+  --font-family-root: var(--font-family-root);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -173,13 +174,4 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-}
-
-/* https://www.skeleton.dev/docs/svelte/tailwind-components/forms#windows-bugfix */
-.select,
-.input,
-.textarea,
-.input-group {
-  background-color: var(--color-surface-50-950);
-  color: var(--color-surface-950-50);
 }
