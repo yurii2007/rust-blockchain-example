@@ -6,18 +6,7 @@
 
   const anchor = resolve('/');
 
-  async function onGoogleClick() {
-    const res = await fetch(`${PUBLIC_API_URL}/auth/google/login`, {
-      method: 'GET',
-      credentials: 'include'
-    });
-
-    const parsed = await res.json();
-
-    console.log('res', parsed);
-
-    window.location = parsed.redirect_url;
-  }
+  const googleAuthUrl = `${PUBLIC_API_URL}/auth/google/login`;
 </script>
 
 <main
@@ -37,7 +26,7 @@
 
       <ul class="mt-8 flex w-full flex-col gap-3">
         <li class="w-full">
-          <Button variant="outline" class="w-full" onclick={onGoogleClick}>
+          <Button href={googleAuthUrl} rel="external" variant="outline" class="w-full">
             <AuthIcon icon="google-color" />
             Continue with Google</Button
           >
