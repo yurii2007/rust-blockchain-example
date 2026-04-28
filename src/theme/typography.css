@@ -1,18 +1,15 @@
 @layer components {
   .typography-h1 {
     font-weight: 600;
-    font-size: 3.75rem;
-    line-height: 1;
-    letter-spacing: -3px;
+    font-size: clamp(2.25rem, 5vw, 3.75rem);
+    line-height: 1.1;
+    letter-spacing: -0.05em;
   }
   .typography-h2 {
     font-weight: 600;
-    font-size: 3rem;
-    line-height: 1;
-    letter-spacing: -1.2px;
-    @media screen and (max-width: 767.99px) {
-      letter-spacing: normal;
-    }
+    font-size: clamp(1.875rem, 4vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: -0.025em;
   }
   .typography-h3 {
     font-weight: 500;
@@ -41,9 +38,23 @@
     font-size: 1rem;
     line-height: 1.5;
   }
+  .typography-caption {
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
   .typography-button {
     font-weight: 600;
     font-size: 1rem;
     line-height: 1.5;
+  }
+  .typography-link {
+    color: var(--primary);
+    text-decoration: none;
+    text-underline-offset: 4px;
+    transition: text-decoration 0.15s;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
