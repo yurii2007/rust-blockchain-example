@@ -1,13 +1,12 @@
-import { INTERNAL_API_URL } from '$env/static/private';
-
-type FetchFn = typeof globalThis.fetch;
+import { PUBLIC_API_URL } from '$env/static/public';
+import type { RequestEvent } from '@sveltejs/kit';
 
 export async function api<T>(
   path: string,
-  fetchFn: FetchFn,
+  event: RequestEvent,
   options?: RequestInit
 ): Promise<{ data: T | null; status: number }> {
-  const res = await fetchFn(`${INTERNAL_API_URL}${path}`, options);
+  const res = await event.fetch(`${PUBLIC_API_URL}${path}`, options);
 
   if (!res.ok) return { data: null, status: res.status };
 

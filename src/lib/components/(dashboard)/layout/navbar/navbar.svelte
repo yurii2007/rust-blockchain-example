@@ -33,7 +33,9 @@
             href={resolve(link.href)}
             class={cn(
               'flex w-full items-center gap-4 border-l-4 border-l-transparent px-6 py-2 text-muted-foreground transition-colors hover:border-l-primary hover:text-primary',
-              page.url.pathname === link.href && 'border-l-primary text-primary'
+              (page.url.pathname === link.href ||
+                (link.href !== '/' && page.url.pathname.startsWith(link.href))) &&
+                'border-l-primary text-primary'
             )}
           >
             <DashboardIcon icon={link.icon} width={18} height={18} class="size-4.5 " />

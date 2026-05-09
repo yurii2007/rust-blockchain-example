@@ -1,4 +1,5 @@
 import { sequence } from '@sveltejs/kit/hooks';
+import { redirect } from '@sveltejs/kit';
 import svgSprite from '$lib/assets/sprite.svg?raw';
 import type { Handle, HandleFetch } from '@sveltejs/kit';
 import { INTERNAL_API_URL } from '$env/static/private';
@@ -11,15 +12,33 @@ const handleSvgSprite: Handle = async ({ event, resolve }) => {
 };
 
 const handleAuthState: Handle = async ({ event, resolve }) => {
-  try {
-    const res = await event.fetch(`${PUBLIC_API_URL}/auth/user`, { credentials: 'include' });
+  const cookies = event.request.headers.get('cookie');
 
-    if (res.ok) {
-      const body = await res.json();
-      event.locals.user = body.data;
+  if (cookies) {
+    try {
+      const res = await event.fetch(`${INTERNAL_API_URL}/auth/user`, {
+        headers: { cookie: cookies }
+      });
+
+      if (res.ok) {
+        const body = await res.json();
+        event.locals.user = body.data;
+      }
+    } catch {
+      event.locals.user = undefined;
     }
-  } catch {
-    event.locals.user = undefined;
+  }
+
+  const { pathname } = event.url;
+  const isAuthRoute = pathname.startsWith('/auth');
+  const isPublicRoute = isAuthRoute || pathname.startsWith('/ui');
+
+  if (!isPublicRoute && !event.locals.user) {
+    redirect(303, '/auth');
+  }
+
+  if (isAuthRoute && event.locals.user) {
+    redirect(303, '/');
   }
 
   return resolve(event);
